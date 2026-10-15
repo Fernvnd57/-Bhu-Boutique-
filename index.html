@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>BHU BOUTIQUE | Chaussures & Vêtements</title>
+
+<style>
+
+:root { --gold:#f5c518; --gold-light:#ffe36e; --black:#101010; --panel:#1b1b1b; --white:#fff; --muted:#bdbdbd; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--black); color:var(--white); font-family:'Arial Black',Arial,sans-serif; line-height:1.6; }
+header { background:linear-gradient(135deg,#080808,#24200e); color:var(--white); padding:28px 16px; text-align:center; border-bottom:2px solid var(--gold); }
+header h1 { margin:0; font-size:clamp(2.2rem,9vw,4rem); font-weight:900; font-style:italic; letter-spacing:-2px; text-transform:uppercase; line-height:1.1; }
+header h1 span { color:var(--gold); text-shadow:0 0 18px #f5c51835; }
+header p { color:var(--muted); letter-spacing:3px; text-transform:uppercase; font-size:.8rem; }
+h2,h3 { color:var(--gold); }
+a { color:var(--gold); text-decoration:none; }
+button,.btn { background:var(--gold); color:#111; border:0; border-radius:6px; padding:12px 18px; font-weight:900; text-transform:uppercase; cursor:pointer; }
+button:hover,.btn:hover { background:var(--gold-light); }
+input,select,textarea { background:#202020; color:white; border:1px solid #51451b; border-radius:6px; padding:10px; }
+footer { background:#080808; color:#ccc; text-align:center; padding:24px 14px; border-top:1px solid var(--gold); }
+img { max-width:100%; }
+@media(max-width:600px) { header { padding:24px 12px; } header p { letter-spacing:2px; } }
+
+
+/* BHU BOUTIQUE - STREET GOLD */
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+header .logo-bhu {
+  color: #f5c518;
+  font-size: clamp(2rem, 8vw, 3rem);
+  text-shadow: 2px 2px 0 #6d5500;
+}
+header .logo-boutique {
+  color: #ffffff;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  letter-spacing: 3px;
+}
+
+
+/* EN-TETE BHU BOUTIQUE - STYLE MODE */
+.promo-strip {
+  background: #f5c518;
+  color: #111;
+  text-align: center;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #101010;
+  border-bottom: 1px solid #f5c518;
+  text-align: left;
+}
+
+.site-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.site-header .logo-bhu {
+  color: #f5c518;
+  font-size: clamp(25px, 7vw, 34px);
+  text-shadow: 2px 2px 0 #6d5500;
+}
+
+.site-header .logo-boutique {
+  color: white;
+  font-size: clamp(12px, 3.5vw, 17px);
+  letter-spacing: 2px;
+}
+
+.site-header .cart-shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 43px;
+  min-height: 43px;
+  border: 1px solid #51451b;
+  border-radius: 8px;
+  background: #202020;
+  font-size: 23px;
+}
+
+.mobile-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 12px;
+  padding: 0 13px;
+  background: #fff;
+  color: #222;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+}
+
+.mobile-search span {
+  font-size: 23px;
+}
+
+.mobile-search input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
+  background: transparent;
+  color: #111;
+  border: 0;
+  outline: none;
+}
+
+.mobile-search input::placeholder {
+  color: #777;
+}
+
+@media (max-width: 380px) {
+  .site-header { padding: 12px 9px; gap: 6px; }
+  .site-header .logo { gap: 5px; }
+  .site-header .logo-boutique { letter-spacing: 1px; }
+}
+
+
+/* BHU BOUTIQUE - DESIGN MODE */
+:root {
+  --gold: #f5c518;
+  --gold-light: #ffe36e;
+  --black: #101010;
+  --panel: #1b1b1b;
+  --white: #fff;
+  --muted: #bdbdbd;
+}
+
+body {
+  background: #f7f7f7;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.45;
+}
+
+.promo-strip {
+  background: #f5c518;
+  color: #111;
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  color: #111;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 8px #0000000a;
+}
+
+.site-header .logo-bhu {
+  color: #d6a900;
+  font-size: clamp(26px, 7vw, 34px);
+  text-shadow: none;
+}
+
+.site-header .logo-boutique {
+  color: #171717;
+  font-size: clamp(12px, 3.5vw, 17px);
+  letter-spacing: 2px;
+}
+
+.site-header .cart-shortcut {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.mobile-search {
+  margin: 12px;
+  border: 1px solid #e5e5e5;
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+.mobile-search input {
+  color: #111;
+  background: transparent;
+}
+
+.hero {
+  margin: 12px;
+  padding: 32px 18px;
+  min-height: 205px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(120deg, #191919, #39301a);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 8vw, 42px);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.hero h1 span {
+  color: #f5c518;
+}
+
+.hero p {
+  margin: 0 0 18px;
+  color: #eee;
+  font-size: 14px;
+}
+
+.hero button {
+  background: #f5c518;
+  border-radius: 3px;
+  padding: 12px 17px;
+}
+
+main {
+  padding: 8px 12px 24px;
+}
+
+main h2 {
+  color: #171717;
+  font-size: 22px;
+  margin: 18px 0 6px;
+  font-weight: 800;
+}
+
+main > p {
+  color: #666;
+  font-size: 13px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 0 15px;
+  scrollbar-width: none;
+}
+
+.filters button {
+  flex: 0 0 auto;
+  background: #fff;
+  color: #222;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 9px 14px;
+  font-size: 11px;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: #171717;
+  color: #fff;
+  border-color: #171717;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.products > * {
+  min-width: 0;
+}
+
+#cart {
+  margin-top: 26px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+#cart h2 {
+  margin-top: 0;
+}
+
+#cart .order {
+  width: 100%;
+  background: #f5c518;
+  color: #111;
+  border-radius: 4px;
+}
+
+footer {
+  background: #171717;
+  color: #eee;
+  border-top: 3px solid #f5c518;
+}
+
+footer h3 {
+  color: #f5c518;
+}
+
+input, select, textarea {
+  border-radius: 4px;
+}
+
+button, .btn {
+  border-radius: 4px;
+}
+
+@media (max-width: 360px) {
+  .products { gap: 8px; }
+  main { padding-left: 9px; padding-right: 9px; }
+}
+
+</style>
+</head>
+
+<body>
+<div class="promo-strip">BHU BOUTIQUE • TON STYLE, TON CHOIX</div>
+<header class="site-header">
+  <div class="logo"><span class="logo-bhu">BHU</span><span class="logo-boutique">BOUTIQUE</span></div>
+  <a class="cart-shortcut" href="#cart" aria-label="Voir le panier">🛍️</a>
+</header>
+<div class="mobile-search">
+  <span>⌕</span>
+  <input id="searchInput" type="search"
+    placeholder="Rechercher chaussures, vêtements..."
+    oninput="rechercherProduits(this.value)">
+</div>
+
+<section class="hero">
+  <h1>Affirme ton <span>style.</span></h1>
+  <p>Découvre les articles de BHU BOUTIQUE.</p>
+  <button onclick="document.getElementById('catalogue').scrollIntoView({behavior:'smooth'})">
+    Découvrir la collection
+  </button>
+</section>
+
+<main>
+  <h2 id="catalogue">Notre collection</h2>
+  <p>Choisis tes articles et commande facilement.</p>
+
+  <div class="filters">
+    <button class="active" data-cat="Tous">Tout</button>
+    <button data-cat="Chaussures">Chaussures</button>
+    <button data-cat="Vêtements">Vêtements</button>
+    <button data-cat="Accessoires">Accessoires</button>
+  </div>
+
+  <div class="filters" id="brands" style="margin-top:-12px"></div>
+  <section class="products" id="products"></section>
+
+  <section id="cart">
+    <h2>🛒 Mon panier</h2>
+    <div id="items">Ton panier est vide.</div>
+    <p class="total">Total : <span id="total">0 FCFA</span></p>
+    <button class="order" onclick="commander()">
+      Commander sur WhatsApp
+    </button>
+  </section>
+</main>
+
+<footer>
+  <h3>BHU BOUTIQUE</h3>
+  <p>Merci pour ta confiance !</p>
+  <p>Commandes : +225 07 67 55 99 09</p>
+  <a href="https://wa.me/2250767559909" target="_blank">
+    Nous contacter sur WhatsApp
+  </a>
+</footer>
+
+<script>
+const produits = [
+  {
+    "nom": "Air Sport blanche",
+    "prix": 15000,
+    "cat": "Chaussures",
+    "marque": "Nike",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Sneaker noire",
+    "prix": 18000,
+    "cat": "Chaussures",
+    "marque": "Adidas",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Runner sport",
+    "prix": 20000,
+    "cat": "Chaussures",
+    "marque": "Puma",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Basket classique",
+    "prix": 17000,
+    "cat": "Chaussures",
+    "marque": "Converse",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Sneaker montante",
+    "prix": 22000,
+    "cat": "Chaussures",
+    "marque": "Vans",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Basket urbaine",
+    "prix": 25000,
+    "cat": "Chaussures",
+    "marque": "New Balance",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Sneaker rouge",
+    "prix": 16000,
+    "cat": "Chaussures",
+    "marque": "Nike",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Basket blanche",
+    "prix": 19000,
+    "cat": "Chaussures",
+    "marque": "Adidas",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Chaussure training",
+    "prix": 21000,
+    "cat": "Chaussures",
+    "marque": "Puma",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Basket streetwear",
+    "prix": 18000,
+    "cat": "Chaussures",
+    "marque": "Vans",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Sneaker confort",
+    "prix": 23000,
+    "cat": "Chaussures",
+    "marque": "New Balance",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Basket montante",
+    "prix": 20000,
+    "cat": "Chaussures",
+    "marque": "Converse",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Chaussure running",
+    "prix": 24000,
+    "cat": "Chaussures",
+    "marque": "Nike",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Basket lifestyle",
+    "prix": 22000,
+    "cat": "Chaussures",
+    "marque": "Adidas",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Sneaker légère",
+    "prix": 17500,
+    "cat": "Chaussures",
+    "marque": "Puma",
+    "emoji": "👟"
+  },
+  {
+    "nom": "Chaussure casual",
+    "prix": 14000,
+    "cat": "Chaussures",
+    "marque": "Autres",
+    "emoji": "👞"
+  },
+  {
+    "nom": "Sandales tendance",
+    "prix": 7000,
+    "cat": "Chaussures",
+    "marque": "Autres",
+    "emoji": "🩴"
+  },
+  {
+    "nom": "Mocassins classiques",
+    "prix": 12000,
+    "cat": "Chaussures",
+    "marque": "Autres",
+    "emoji": "👞"
+  },
+  {
+    "nom": "Claquettes confort",
+    "prix": 5000,
+    "cat": "Chaussures",
+    "marque": "Autres",
+    "emoji": "🩴"
+  },
+  {
+    "nom": "Baskets premium",
+    "prix": 26000,
+    "cat": "Chaussures",
+    "marque": "New Balance",
+    "emoji": "👟"
+  },
+  {
+    "nom": "T-shirt blanc",
+    "prix": 5000,
+    "cat": "Vêtements",
+    "marque": "Nike",
+    "emoji": "👕"
+  },
+  {
+    "nom": "T-shirt noir",
+    "prix": 5000,
+    "cat": "Vêtements",
+    "marque": "Adidas",
+    "emoji": "👕"
+  },
+  {
+    "nom": "T-shirt imprimé",
+    "prix": 6000,
+    "cat": "Vêtements",
+    "marque": "Puma",
+    "emoji": "👕"
+  },
+  {
+    "nom": "T-shirt oversize",
+    "prix": 7000,
+    "cat": "Vêtements",
+    "marque": "Zara",
+    "emoji": "👕"
+  },
+  {
+    "nom": "Polo classique",
+    "prix": 8000,
+    "cat": "Vêtements",
+    "marque": "Lacoste",
+    "emoji": "👕"
+  },
+  {
+    "nom": "Sweat à capuche",
+    "prix": 12000,
+    "cat": "Vêtements",
+    "marque": "Nike",
+    "emoji": "🧥"
+  },
+  {
+    "nom": "Hoodie streetwear",
+    "prix": 14000,
+    "cat": "Vêtements",
+    "marque": "Adidas",
+    "emoji": "🧥"
+  },
+  {
+    "nom": "Sweat zippé",
+    "prix": 13000,
+    "cat": "Vêtements",
+    "marque": "Puma",
+    "emoji": "🧥"
+  },
+  {
+    "nom": "Jean bleu",
+    "prix": 12000,
+    "cat": "Vêtements",
+    "marque": "Levi's",
+    "emoji": "👖"
+  },
+  {
+    "nom": "Jean noir",
+    "prix": 13000,
+    "cat": "Vêtements",
+    "marque": "Zara",
+    "emoji": "👖"
+  },
+  {
+    "nom": "Pantalon cargo",
+    "prix": 10000,
+    "cat": "Vêtements",
+    "marque": "Bershka",
+    "emoji": "👖"
+  },
+  {
+    "nom": "Pantalon classique",
+    "prix": 11000,
+    "cat": "Vêtements",
+    "marque": "Zara",
+    "emoji": "👖"
+  },
+  {
+    "nom": "Short sport",
+    "prix": 6000,
+    "cat": "Vêtements",
+    "marque": "Nike",
+    "emoji": "🩳"
+  },
+  {
+    "nom": "Short décontracté",
+    "prix": 5500,
+    "cat": "Vêtements",
+    "marque": "Adidas",
+    "emoji": "🩳"
+  },
+  {
+    "nom": "Ensemble sport",
+    "prix": 18000,
+    "cat": "Vêtements",
+    "marque": "Puma",
+    "emoji": "🥋"
+  },
+  {
+    "nom": "Ensemble streetwear",
+    "prix": 22000,
+    "cat": "Vêtements",
+    "marque": "Nike",
+    "emoji": "🥋"
+  },
+  {
+    "nom": "Chemise blanche",
+    "prix": 9000,
+    "cat": "Vêtements",
+    "marque": "Zara",
+    "emoji": "👔"
+  },
+  {
+    "nom": "Chemise imprimée",
+    "prix": 8500,
+    "cat": "Vêtements",
+    "marque": "H&M",
+    "emoji": "👔"
+  },
+  {
+    "nom": "Veste légère",
+    "prix": 16000,
+    "cat": "Vêtements",
+    "marque": "Zara",
+    "emoji": "🧥"
+  },
+  {
+    "nom": "Veste jean",
+    "prix": 18000,
+    "cat": "Vêtements",
+    "marque": "Levi's",
+    "emoji": "🧥"
+  },
+  {
+    "nom": "Débardeur sport",
+    "prix": 4500,
+    "cat": "Vêtements",
+    "marque": "Nike",
+    "emoji": "👕"
+  },
+  {
+    "nom": "Legging sport",
+    "prix": 8000,
+    "cat": "Vêtements",
+    "marque": "Puma",
+    "emoji": "👖"
+  },
+  {
+    "nom": "Jogging",
+    "prix": 12000,
+    "cat": "Vêtements",
+    "marque": "Adidas",
+    "emoji": "👖"
+  },
+  {
+    "nom": "T-shirt graphique",
+    "prix": 6500,
+    "cat": "Vêtements",
+    "marque": "H&M",
+    "emoji": "👕"
+  },
+  {
+    "nom": "Cardigan tendance",
+    "prix": 15000,
+    "cat": "Vêtements",
+    "marque": "Zara",
+    "emoji": "🧥"
+  },
+  {
+    "nom": "Casquette classique",
+    "prix": 4000,
+    "cat": "Accessoires",
+    "marque": "New Era",
+    "emoji": "🧢"
+  },
+  {
+    "nom": "Casquette sport",
+    "prix": 5000,
+    "cat": "Accessoires",
+    "marque": "Nike",
+    "emoji": "🧢"
+  },
+  {
+    "nom": "Casquette streetwear",
+    "prix": 7000,
+    "cat": "Accessoires",
+    "marque": "Adidas",
+    "emoji": "🧢"
+  },
+  {
+    "nom": "Montre élégante",
+    "prix": 12000,
+    "cat": "Accessoires",
+    "marque": "Casio",
+    "emoji": "⌚"
+  },
+  {
+    "nom": "Montre digitale",
+    "prix": 10000,
+    "cat": "Accessoires",
+    "marque": "Casio",
+    "emoji": "⌚"
+  },
+  {
+    "nom": "Lunettes de soleil",
+    "prix": 5000,
+    "cat": "Accessoires",
+    "marque": "Autres",
+    "emoji": "🕶️"
+  },
+  {
+    "nom": "Sac bandoulière",
+    "prix": 9000,
+    "cat": "Accessoires",
+    "marque": "Autres",
+    "emoji": "👜"
+  },
+  {
+    "nom": "Sac à dos",
+    "prix": 12000,
+    "cat": "Accessoires",
+    "marque": "Nike",
+    "emoji": "🎒"
+  },
+  {
+    "nom": "Portefeuille",
+    "prix": 4000,
+    "cat": "Accessoires",
+    "marque": "Autres",
+    "emoji": "👛"
+  },
+  {
+    "nom": "Ceinture classique",
+    "prix": 3500,
+    "cat": "Accessoires",
+    "marque": "Autres",
+    "emoji": "🧷"
+  },
+  {
+    "nom": "Bracelet mode",
+    "prix": 2500,
+    "cat": "Accessoires",
+    "marque": "Autres",
+    "emoji": "📿"
+  },
+  {
+    "nom": "Sac à main",
+    "prix": 10000,
+    "cat": "Accessoires",
+    "marque": "Autres",
+    "emoji": "👜"
+  },
+  {
+    "nom": "Lunettes tendance",
+    "prix": 6000,
+    "cat": "Accessoires",
+    "marque": "Autres",
+    "emoji": "🕶️"
+  },
+  {
+    "nom": "Bonnet streetwear",
+    "prix": 3500,
+    "cat": "Accessoires",
+    "marque": "Adidas",
+    "emoji": "🧢"
+  },
+  {
+    "nom": "Pochette téléphone",
+    "prix": 3000,
+    "cat": "Accessoires",
+    "marque": "Autres",
+    "emoji": "📱"
+  }
+];
+
+const photos = [
+"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=800&q=80",
+"https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80"
+];
+let panier = [];
+let categorie = "Tous";
+let marque = "Toutes";
+let recherche = "";
+
+produits.forEach((p, index) => { p.index = index; });
+
+function afficherProduits(){
+ const liste = produits.map((p,i)=>({...p,index:i}))
+   .filter(p=>(categorie==="Tous"||p.cat===categorie)
+      &&(marque==="Toutes"||p.marque===marque)
+      &&(p.nom.toLowerCase().includes(recherche)
+         ||p.cat.toLowerCase().includes(recherche)
+         ||(p.marque||"").toLowerCase().includes(recherche)));
+
+ const zoneMarques=document.getElementById("brands");
+ if(categorie==="Tous"){
+   zoneMarques.innerHTML="";
+ }else{
+   const marques=[...new Set(produits
+     .filter(p=>p.cat===categorie).map(p=>p.marque))];
+   zoneMarques.innerHTML=
+     `<button data-marque="Toutes" class="${marque==="Toutes"?"active":""}">Toutes les marques</button>`+
+     marques.map(m=>`<button data-marque="${m}" class="${marque===m?"active":""}">${m}</button>`).join("");
+ }
+
+ document.getElementById("products").innerHTML=liste.map(p=>`
+ <article class="card">
+   <div class="photo"><img src="${photos[p.index % photos.length]}" alt="${p.nom}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+   <h3>${p.nom}</h3>
+   <p>${p.cat} · ${p.marque}</p>
+   <p class="price">${p.prix.toLocaleString("fr-FR")} FCFA</p>
+   <button class="buy" data-add="${p.index}">Ajouter au panier</button>
+ </article>`).join("");
+}
+
+document.getElementById("brands").addEventListener("click",e=>{
+ const b=e.target.closest("[data-marque]");
+ if(!b)return;
+ marque=b.dataset.marque;
+ afficherProduits();
+});
+document.getElementById("products").addEventListener("click",e=>{
+ const b=e.target.closest("[data-add]");
+ if(!b)return;
+ panier.push(Number(b.dataset.add));
+ afficherPanier();
+});
+
+document.querySelector(".filters:not(#brands)").addEventListener("click",e=>{
+ const b=e.target.closest("[data-cat]");
+ if(!b)return;
+ categorie=b.dataset.cat;
+ marque="Toutes";
+ document.querySelectorAll(".filters:not(#brands) button").forEach(btn=>{
+   btn.classList.toggle("active",btn===b);
+ });
+ afficherProduits();
+});
+
+function rechercherProduits(texte){
+ recherche=texte.toLowerCase().trim();
+ afficherProduits();
+}
+
+function afficherPanier(){
+ const zone=document.getElementById("items");
+ if(!panier.length){
+   zone.textContent="Ton panier est vide.";
+ }else{
+   zone.replaceChildren();
+   panier.forEach((index,i)=>{
+     const p=produits[index];
+     const ligne=document.createElement("div");
+     ligne.className="cartline";
+     ligne.textContent=p.nom+" — "+p.prix.toLocaleString("fr-FR")+" FCFA ";
+
+     const b=document.createElement("button");
+     b.className="remove";
+     b.textContent="Retirer";
+     b.onclick=()=>{panier.splice(i,1);afficherPanier()};
+     ligne.appendChild(b);
+     zone.appendChild(ligne);
+   });
+ }
+ const total=panier.reduce((s,i)=>s+produits[i].prix,0);
+ document.getElementById("total").textContent=
+ total.toLocaleString("fr-FR")+" FCFA";
+}
+
+function commander(){
+ if(!panier.length){
+   alert("Ajoute d'abord un article au panier.");
+   return;
+ }
+ const details=panier.map(i=>{
+   const p=produits[i];
+   return p.nom+" : "+p.prix+" FCFA";
+ }).join("\n");
+ const total=panier.reduce((s,i)=>s+produits[i].prix,0);
+ const message="Bonjour BHU BOUTIQUE ! Je souhaite commander :\n"+
+ details+"\nTotal des articles : "+total+
+ " FCFA\nMerci de me confirmer la disponibilité et la livraison.";
+ window.open("https://wa.me/2250767559909?text="+
+ encodeURIComponent(message),"_blank");
+}
+
+afficherProduits();
+</script>
+
+<nav class="mobile-nav" aria-label="Navigation principale">
+  <button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <span>⌂</span>Accueil
+  </button>
+  <button type="button" onclick="document.getElementById('catalogue').scrollIntoView({behavior:'smooth'})">
+    <span>▦</span>Catégories
+  </button>
+  <button type="button" onclick="document.getElementById('cart').scrollIntoView({behavior:'smooth'})">
+    <span>🛍️</span>Panier
+  </button>
+</nav>
+
+</body>
+</html>
+0
+
